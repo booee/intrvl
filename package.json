@@ -1,0 +1,22 @@
+{
+  "name": "intrvl",
+  "version": "1.0.0",
+  "description": "A quick tool for creating a time-based interval that stops itself based on timeout or execution count",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test-intrvl.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brad-bowie/intrvl.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brad-bowie/intrvl/issues"
+  },
+  "homepage": "https://github.com/brad-bowie/intrvl",
+  "dependencies": {
+    "mocha": "^2.2.1"
+  }
+}
