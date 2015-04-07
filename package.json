@@ -1,7 +1,7 @@
 {
   "name": "intrvl",
-  "version": "1.0.2",
-  "description": "Lightweight finite intervals that stops itself based on timeout and/or execution count",
+  "version": "1.0.4",
+  "description": "Finite intervals with timeout and max execution count",
   "main": "index.js",
   "scripts": {
     "test": "mocha test-intrvl.js"

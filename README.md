@@ -23,7 +23,7 @@ Passed back from the `intrvl.start` method.
 
 ##### Intrvl.stop()
 ```
-var interval = require('./index').start(function(){ console.log('Hello, World') }, 1000);
+var interval = require('intrvl').start(function(){ console.log('Hello, World') }, 1000);
 interval.on('stop', function() {
     console.log('I was explicitly stopped!');
 });
@@ -37,7 +37,7 @@ Emitted on each execution of the interval
 var execCount = 0;
 
 // runs every 5 seconds, 5 times total, and dies
-var interval = require('./index').start(function(){ console.log('Hello, World') }, 1000, undefined, 5);
+var interval = require('intrvl').start(function(){ console.log('Hello, World') }, 1000, undefined, 5);
 
 interval.on('exec', function() { execCount++; });
 ```
@@ -49,7 +49,7 @@ Emitted when an interval has finished, either by self-imposed limits (timeoutMil
 var execCount = 0;
 
 // runs every 5 seconds, 5 times total, and dies
-var interval = require('./index').start(function(){ console.log('Hello, World') }, 1000, undefined, 5);
+var interval = require('intrvl').start(function(){ console.log('Hello, World') }, 1000, undefined, 5);
 
 interval.on('exec', function() { execCount++; });
 
@@ -62,7 +62,7 @@ interval.on('stop', function() {
 ```
 // runs every 1 ms, ends after 100 executions
 
-var intrvl = require('./index');
+var intrvl = require('intrvl');
 
 var execCount = 0;
 var intervalMillis = 1;
@@ -87,7 +87,7 @@ interval.on('stop', function() {
 ```
 // runs every 1 ms, ends after 1000 ms
 
-var intrvl = require('./index');
+var intrvl = require('intrvl');
 
 var execCount = 0;
 var intervalMillis = 1;
@@ -110,7 +110,7 @@ interval.on('stop', function() {
 ```
 // runs every 1 ms, never ends... might as well use setInterval at this point
 
-var intrvl = require('./index');
+var intrvl = require('intrvl');
 
 var execCount = 0;
 var intervalMillis = 1;
