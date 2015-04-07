@@ -1,6 +1,6 @@
 {
   "name": "intrvl",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Finite intervals with timeout and max execution count",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,5 @@
     "url": "https://github.com/brad-bowie/intrvl/issues"
   },
   "homepage": "https://github.com/brad-bowie/intrvl",
-  "dependencies": {
-    "mocha": "^2.2.1"
-  }
+  "dependencies": {}
 }

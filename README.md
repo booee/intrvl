@@ -1,6 +1,6 @@
 # intrvl
 
-A quick tool for creating a time-based interval that stops itself based on timeout or execution count
+A lightweight utility for creating a node.js interval that stops itself based on timeout and/or max execution count
 
 ### Installation
 
