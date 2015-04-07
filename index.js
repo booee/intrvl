@@ -22,6 +22,8 @@ function FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec) {
     }
 
     this.stop = function() {
+        if(!interval) return; // not running
+
         if(interval) clearInterval(interval);
         if(timeout) clearTimeout(timeout);
         self.emit('stop');
