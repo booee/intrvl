@@ -1,6 +1,6 @@
 {
   "name": "intrvl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A quick tool for creating a time-based interval that stops itself based on timeout or execution count",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,16 @@
     "type": "git",
     "url": "https://github.com/brad-bowie/intrvl.git"
   },
+  "keywords": [
+    "interval",
+    "max",
+    "timeout",
+    "finite interval",
+    "finite",
+    "bounded",
+    "bounded interval",
+    "limit"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
