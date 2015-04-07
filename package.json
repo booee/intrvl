@@ -4,7 +4,7 @@
   "description": "Finite intervals with timeout and max execution count",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test-intrvl.js"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
