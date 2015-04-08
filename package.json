@@ -1,6 +1,6 @@
 {
   "name": "intrvl",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Finite intervals with timeout and max execution count",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "interval",
+    "intervals",
     "max",
     "max interval",
     "timeout",
@@ -26,6 +27,9 @@
     "limit interval",
     "limited",
     "limited interval"
+    "better interval",
+    "variable",
+    "variable interval"
   ],
   "author": "",
   "license": "MIT",

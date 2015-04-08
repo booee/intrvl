@@ -5,17 +5,13 @@ var fi = require('./index');
 
 it('should end on max execution', function(done){
     this.timeout(2000);
-    var execCount = 0;
+    var someNum = 0;
 
     var interval = fi.start(function() {
-        // do some work
-    }, 1, undefined, 100);
+        someNum++;
+    }, 1, undefined, 100); // kill after 100 executions
 
-    interval.on('exec', function() {
-        execCount++;
-    });
-
-    interval.on('stop', function() {
+    interval.on('stop', function(execCount) {
         assert.equal(execCount, 100);
         done();
     });
@@ -23,17 +19,13 @@ it('should end on max execution', function(done){
 
 it('should be stopped by a timeout', function(done){
     this.timeout(2000);
-    var execCount = 0;
+    var someNum = 0;
 
     var interval = fi.start(function() {
-        // do some work
+        someNum++;
     }, 1, 100); // kill after 100ms
 
-    interval.on('exec', function() {
-        execCount++;
-    });
-
-    interval.on('stop', function() {
+    interval.on('stop', function(execCount) {
         assert.equal(execCount > 1, true);
         done();
     });

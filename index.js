@@ -17,7 +17,7 @@ function FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec) {
         if(toExec) toExec();
 
         execCount++;
-        self.emit('exec');
+        self.emit('exec', execCount);
         if(maxExec && execCount >= maxExec) self.stop();
     }
 
@@ -26,7 +26,7 @@ function FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec) {
 
         if(interval) clearInterval(interval);
         if(timeout) clearTimeout(timeout);
-        self.emit('stop');
+        self.emit('stop', execCount);
     }
 }
 
