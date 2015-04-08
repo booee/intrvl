@@ -1,7 +1,7 @@
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 
-function FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec) {
+function Intrvl(toExec, intervalMillis, timeoutMillis, maxExec) {
     var self = this;
     var execCount = 0;
     var interval = setInterval(exec, intervalMillis);
@@ -30,9 +30,9 @@ function FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec) {
     }
 }
 
-util.inherits(FiniteInterval, EventEmitter);
+util.inherits(Intrvl, EventEmitter);
 module.exports = {
-    start : function(toExec, intervalMillis, timeoutMillis, maxExec) {
-        return new FiniteInterval(toExec, intervalMillis, timeoutMillis, maxExec);
+    setIntrvl : function(toExec, intervalMillis, timeoutMillis, maxExec) {
+        return new Intrvl(toExec, intervalMillis, timeoutMillis, maxExec);
     }
 };

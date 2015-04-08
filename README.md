@@ -10,7 +10,7 @@ npm install intrvl
 
 ### Usage
 
-#### intrvl.start(toExecute, intervalMillis, timeoutMillis, maxExecutionCount)
+#### intrvl.setIntrvl(toExecute, intervalMillis, timeoutMillis, maxExecutionCount)
 * `toExecute` Function. Executes at every interval
 * `intervalMillis` Number. How many milliseconds between execution
 * `timeoutMillis` Number. How long to allow the interval to run before stopping. Left `undefined`, the interval will run without a timeout
@@ -19,14 +19,14 @@ npm install intrvl
 Returns a new `Intrvl` class instance (running by default)
 
 #### Class: intrvl.Intrvl
-Passed back from the `intrvl.start` method.
+Passed back from the `intrvl.setIntrvl` method.
 
 ##### Intrvl.stop()
 Causes the interval to stop execution, as if a timeout or max had been reached.
 ```
-var intrvl = require('intrvl');
+var setIntrvl = require('intrvl').setIntrvl;
 
-var interval = intrvl.start(function(){
+var interval = setIntrvl(function(){
     console.log('Hello, World')
 }, 1000); // runs indefinitely
 
@@ -43,9 +43,9 @@ interval.stop();
 ##### Event: 'exec'
 Emitted on each execution of the interval. Argument is the current execution count
 ```
-var intrvl = require('intrvl');
+var setIntrvl = require('intrvl').setIntrvl;
 
-var interval = intrvl.start(function(){
+var interval = setIntrvl(function(){
     console.log('Hello, World');
 }, 1000, undefined, 5); // executes every second, stops after 5 executions
 
@@ -58,9 +58,9 @@ interval.on('exec', function(execCount) {
 Emitted when an interval has finished, either by self-imposed limits (timeoutMills, maxExecutionCount), or by calling `.stop()` on a running instance. Argument is the total execution count
 
 ```
-var intrvl = require('intrvl');
+var setIntrvl = require('intrvl').setIntrvl;
 
-var interval = intrvl.start(function(){
+var interval = setIntrvl(function(){
     console.log('Hello, World');
 }, 1000, undefined, 5); // executes every second, stops after 5 executions
 
@@ -74,13 +74,13 @@ Using competing configurations
 ```
 // runs every 1 ms, ends after 100ms or 100 executions, whichever happens first!
 
-var intrvl = require('intrvl');
+var setIntrvl = require('intrvl').setIntrvl;
 
 var intervalMillis = 1;
 var timeoutMillis = 100;
 var maxExecutionCount = 100;
 
-var interval = intrvl.start(function() {
+var interval = setIntrvl(function() {
     console.log('Hello, World');
 }, intervalMillis, timeoutMillis, maxExecutionCount);
 
@@ -95,13 +95,13 @@ Inifinite intrvl still gives us events!
 // might as well use setInterval at this point, right?
 // hold up - we can still have fun with events!
 
-var intrvl = require('intrvl');
+var setIntrvl = require('intrvl').setIntrvl;
 
 var intervalMillis = 1;
 var timeoutMillis = undefined;
 var maxExecutionCount = undefined;
 
-var interval = intrvl.start(function() {
+var interval = setIntrvl(function() {
     console.log('Hello, World');
 }, intervalMillis, timeoutMillis, maxExecutionCount);
 

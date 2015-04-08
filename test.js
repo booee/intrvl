@@ -1,13 +1,13 @@
 // mochaaaaaaaaaa
 
 var assert = require('assert');
-var fi = require('./index');
+var setIntrvl = require('./index').setIntrvl;
 
 it('should end on max execution', function(done){
     this.timeout(2000);
     var someNum = 0;
 
-    var interval = fi.start(function() {
+    var interval = setIntrvl(function() {
         someNum++;
     }, 1, undefined, 100); // kill after 100 executions
 
@@ -21,7 +21,7 @@ it('should be stopped by a timeout', function(done){
     this.timeout(2000);
     var someNum = 0;
 
-    var interval = fi.start(function() {
+    var interval = setIntrvl(function() {
         someNum++;
     }, 1, 100); // kill after 100ms
 
