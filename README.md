@@ -13,8 +13,8 @@ npm install intrvl
 #### intrvl.start(toExecute, intervalMillis, timeoutMillis, maxExecutionCount)
 * `toExecute` Function. Executes at every interval
 * `intervalMillis` Number. How many milliseconds between execution
-* `timeoutMillis` Number. How long to allow the interval to run. Left `undefined`, the interval will run without a timeout
-* `maxExecutionCount` Number. How many times to execute the interval. Left `undefined`, the interval will run without a max
+* `timeoutMillis` Number. How long to allow the interval to run before stopping. Left `undefined`, the interval will run without a timeout
+* `maxExecutionCount` Number. How many times to execute the interval before stopping. Left `undefined`, the interval will run without a max
 
 Returns a new `Intrvl` class instance (running by default)
 
