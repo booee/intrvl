@@ -1,6 +1,6 @@
 # intrvl
 
-A lightweight utility for creating a node.js interval that stops itself based on timeout and/or max execution count as well as event emission.
+Lightweight, efficient extension of the interval API
 
 ### Installation
 

@@ -1,41 +1,46 @@
 {
-  "name": "intrvl",
-  "version": "2.0.0",
-  "description": "Finite intervals with timeout and max execution count",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/brad-bowie/intrvl.git"
-  },
-  "keywords": [
-    "interval",
-    "intervals",
-    "max",
-    "max interval",
-    "timeout",
-    "timeout interval",
-    "finite",
-    "finite interval",
-    "bound",
-    "bound interval",
-    "bounded",
-    "bounded interval",
-    "limit",
-    "limit interval",
-    "limited",
-    "limited interval",
-    "better interval",
-    "variable",
-    "variable interval"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
+    "name": "intrvl",
+    "version": "2.0.1",
+    "description": "Lightweight, efficient extension of the interval API",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brad-bowie/intrvl.git"
+    },
+    "keywords": [
+        "cron",
+        "job",
+        "cron job",
+        "schedule",
+        "scheduled task",
+        "interval",
+        "intervals",
+        "max",
+        "max interval",
+        "timeout",
+        "timeout interval",
+        "finite",
+        "finite interval",
+        "bound",
+        "bound interval",
+        "bounded",
+        "bounded interval",
+        "limit",
+        "limit interval",
+        "limited",
+        "limited interval",
+        "better interval",
+        "variable",
+        "variable interval"
+    ],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
     "url": "https://github.com/brad-bowie/intrvl/issues"
-  },
-  "homepage": "https://github.com/brad-bowie/intrvl",
-  "dependencies": {}
+    },
+    "homepage": "https://github.com/brad-bowie/intrvl",
+    "dependencies": {}
 }
